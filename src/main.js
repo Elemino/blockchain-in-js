@@ -52,17 +52,17 @@ class Blockchain{
     }
 }
 
-let savjeeCoin = new Blockchain();
-savjeeCoin.addBlock(new Block(1, "20/07/2017", { amount: 4 }));
-savjeeCoin.addBlock(new Block(2, "20/07/2017", { amount: 8 }));
+let elemCoin = new Blockchain();
+elemCoin.addBlock(new Block(1, "20/07/2017", { amount: 4 }));
+elemCoin.addBlock(new Block(2, "20/07/2017", { amount: 8 }));
 
 
-console.log('Blockchain valid? ' + savjeeCoin.isChainValid());
+console.log('Blockchain valid? ' + elemCoin.isChainValid());
 
 console.log('Changing a block...');
-savjeeCoin.chain[1].data = { amount: 100 };
-// savjeeCoin.chain[1].hash = savjeeCoin.chain[1].calculateHash();
+elemCoin.chain[1].data = { amount: 100 };
+//elemCoin.chain[1].hash = elemCoin.chain[1].calculateHash();
 
-console.log("Blockchain valid? " + savjeeCoin.isChainValid());
+console.log("Blockchain valid? " + elemCoin.isChainValid());
 
-// console.log(JSON.stringify(savjeeCoin, null, 4));
+// console.log(JSON.stringify(elemCoin, null, 4));
